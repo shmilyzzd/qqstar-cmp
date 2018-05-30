@@ -8,13 +8,83 @@
 7 silly initialize attempt
 8 silly isDetachedHead
 9 silly getCurrentBranch
-10 error initialize caught error
-11 error Error: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
-11 error Use '--' to separate paths from revisions, like this:
-11 error 'git <command> [<revision>...] -- [<file>...]'
-11 error
-11 error     at Function.module.exports.sync (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/execa/index.js:303:26)
-11 error     at Function.execSync (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
-11 error     at Function.getCurrentBranch (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/GitUtilities.js:202:59)
-11 error     at Function.isDetachedHead (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/GitUtilities.js:45:37)
-11 error     at PublishCommand.initialize (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/commands/PublishCommand.js:260:36)
+10 verbose getCurrentBranch master
+11 verbose isDetachedHead false
+12 silly getCurrentBranch
+13 verbose getCurrentBranch master
+14 silly getUpdates
+15 info Checking for updated packages...
+16 silly hasTags
+17 verbose hasTags false
+18 info Comparing with initial commit.
+19 verbose updated qsc-tab
+20 info Checking for prereleased packages...
+21 silly collectDependents
+22 silly isPackageDependentOf qsc-tab qsc-tab
+23 silly collectUpdates
+24 verbose has filtered update qsc-tab
+25 silly initialize success
+26 silly execute attempt
+27 silly runScriptSync preversion qqstar-cmp
+28 silly runScriptSync preversion qsc-tab
+29 silly runScriptSync version qsc-tab
+30 silly runScriptSync version qqstar-cmp
+31 silly addFile /Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab/package.json
+32 silly commit Publish by MinDev
+32 silly commit
+32 silly commit  - qsc-tab@1.0.1
+33 verbose commit [ 'commit',
+33 verbose commit   '--no-verify',
+33 verbose commit   '-F',
+33 verbose commit   '/private/var/folders/vc/2130fndd0sbc5f3nm2w10x9c0000gn/T/b7422999-bbd9-4327-b138-a1f1a18297cc/lerna-commit.txt' ]
+34 silly addTag qsc-tab@1.0.1
+35 silly runScriptSync postversion qsc-tab
+36 silly runScriptSync postversion qqstar-cmp
+37 info publish Publishing packages to npm...
+38 silly existsSync /Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab/scripts/prepublish.js
+39 verbose execScript No prepublish script found at /Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab/scripts/prepublish.js
+40 verbose publishing qsc-tab
+41 silly publishTaggedInDir latest qsc-tab
+42 silly getExecOpts { cwd: '/Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab' }
+43 error publish Retrying failed publish: qsc-tab
+44 verbose publish error undefined
+45 verbose publishing qsc-tab
+46 silly publishTaggedInDir latest qsc-tab
+47 silly getExecOpts { cwd: '/Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab' }
+48 error publish Retrying failed publish: qsc-tab
+49 verbose publish error undefined
+50 verbose publishing qsc-tab
+51 silly publishTaggedInDir latest qsc-tab
+52 silly getExecOpts { cwd: '/Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab' }
+53 error publish Retrying failed publish: qsc-tab
+54 verbose publish error undefined
+55 verbose publishing qsc-tab
+56 silly publishTaggedInDir latest qsc-tab
+57 silly getExecOpts { cwd: '/Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab' }
+58 error publish Retrying failed publish: qsc-tab
+59 verbose publish error undefined
+60 verbose publishing qsc-tab
+61 silly publishTaggedInDir latest qsc-tab
+62 silly getExecOpts { cwd: '/Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/packages/qsc-tab' }
+63 error publish Ran out of retries while publishing qsc-tab Error: Command failed: npm publish --tag latest
+63 error publish npm ERR! code ENEEDAUTH
+63 error publish npm ERR! need auth auth required for publishing
+63 error publish npm ERR! need auth You need to authorize this machine using `npm adduser`
+63 error publish
+63 error publish npm ERR! A complete log of this run can be found in:
+63 error publish npm ERR!     /Users/lina/.npm/_logs/2018-05-30T08_42_57_404Z-debug.log
+63 error publish
+63 error publish     at Promise.all.then.arr (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/execa/index.js:236:11)
+63 error publish     at <anonymous>
+63 error publish     at process._tickCallback (internal/process/next_tick.js:188:7)
+64 error execute callback with error
+65 error Error: Command failed: npm publish --tag latest
+65 error npm ERR! code ENEEDAUTH
+65 error npm ERR! need auth auth required for publishing
+65 error npm ERR! need auth You need to authorize this machine using `npm adduser`
+65 error
+65 error npm ERR! A complete log of this run can be found in:
+65 error npm ERR!     /Users/lina/.npm/_logs/2018-05-30T08_42_57_404Z-debug.log
+65 error
+65 error     at Promise.all.then.arr (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/execa/index.js:236:11)
+65 error     at <anonymous>
