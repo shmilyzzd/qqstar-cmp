@@ -1,0 +1,18 @@
+<template>
+  <qsc-tab></qsc-tab>
+</template>
+
+<script>
+export default {
+  config: {
+    usingComponents: {
+      'qsc-tab': 'qsc-tab'
+    }
+  },
+  data: { },
+  methods: { }
+}
+</script>
+
+<style>
+</style>

@@ -1,0 +1,20 @@
+0 silly input [ 'publish' ]
+1 silly flags { exact: true, message: 'Publish by MinDev', scope: 'qsc-tab' }
+2 verbose rootPath /Users/lina/Documents/tencent/work/2018/act/qqstar-cmp
+3 silly isInitialized
+4 silly isInitialized true
+5 silly existsSync /Users/lina/Documents/tencent/work/2018/act/qqstar-cmp/VERSION
+6 info scope qsc-tab
+7 silly initialize attempt
+8 silly isDetachedHead
+9 silly getCurrentBranch
+10 error initialize caught error
+11 error Error: fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+11 error Use '--' to separate paths from revisions, like this:
+11 error 'git <command> [<revision>...] -- [<file>...]'
+11 error
+11 error     at Function.module.exports.sync (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/execa/index.js:303:26)
+11 error     at Function.execSync (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/ChildProcessUtilities.js:59:30)
+11 error     at Function.getCurrentBranch (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/GitUtilities.js:202:59)
+11 error     at Function.isDetachedHead (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/GitUtilities.js:45:37)
+11 error     at PublishCommand.initialize (/Users/lina/.nvm/versions/node/v8.2.1/lib/node_modules/@mindev/min-cli/node_modules/lerna/lib/commands/PublishCommand.js:260:36)

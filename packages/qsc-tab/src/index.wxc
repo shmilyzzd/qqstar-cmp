@@ -1,0 +1,89 @@
+<template>
+  <view class="qsc-tab">
+    <wxc-tab
+    bind:tabchange="onClick"
+    default-index="{{active}}"
+    component-id="c3"
+    animate="{{true}}"
+    class="demo-tab"
+    active-line-color="#fff"
+  >
+    <view slot="tablabel">
+      <wxc-tab-label tab-index="0" component-id="c3" class="label">
+        <image src="./detail.jpg" mode="aspectFit" class="tab-image"></image>
+      </wxc-tab-label>
+       <wxc-tab-label tab-index="1" component-id="c3" class="label">
+        <image src="./key.jpg" class="center-image" mode="aspectFit"></image>
+      </wxc-tab-label>
+       <wxc-tab-label tab-index="2" component-id="c3" class="label">
+        <image src="./work.jpg" mode="aspectFit" class="tab-image"></image>
+      </wxc-tab-label>
+    </view>
+
+    <wxc-tab-panel
+      wx:for="{{tabs}}"
+      wx:for-item="tab"
+      wx:key="{{tab.content}}"
+      tab-index="{{index}}"
+      component-id="c3"
+    >
+      {{tab.content}}
+    </wxc-tab-panel>
+
+    </wxc-tab>
+  </view>
+</template>
+
+<script>
+export default {
+  config: {
+    usingComponents: { 
+      'wxc-tab': '@minui/wxc-tab',
+      'wxc-tab-panel': '@minui/wxc-tab/panel',
+      'wxc-tab-label': '@minui/wxc-tab/label'
+    }
+  },
+  behaviors: [ ],
+  properties: {
+    'active':1
+  },
+  data: { 
+    tabs:[
+        {title: '选项一', content: '内容一'},
+        {title: '选项二', content: '内容二'},
+        {title: '选项三', content: '内容三'}
+      ],
+    activeKey: 0
+  },
+  methods: { 
+    onClick: function(e) {
+      console.log(`ComponentId:${e.detail.componentId},you selected:${e.detail.key}`);
+      const idx = e.detail.key;
+      this.setData({
+        activeKey: idx
+      });
+    }
+  }
+}
+
+
+</script>
+
+<style lang="less">
+.qsc-tab {
+  .label{
+    height: 100px;
+    text-align:center;
+  }
+  .tab-image{
+    width: 120px;
+    height: 65px;
+    margin: 0 auto;
+  }
+  .center-image{
+    width: 32px; 
+    height: 45px;
+    margin: 0 auto; 
+  }
+}
+</style>
